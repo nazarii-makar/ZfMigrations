@@ -1,0 +1,33 @@
+{
+    "name": "o0ps/zf-migrations",
+    "description": "Module for database migrations management.",
+    "type": "library",
+    "license": "BSD-3-Clause",
+    "keywords": [
+        "database",
+        "db",
+        "migrations",
+        "zf3"
+    ],
+    "homepage": "https://github.com/o0ps/ZfMigrations",
+	"minimum-stability": "dev",
+	"prefer-stable": true,
+    "authors": [
+        {
+            "name": "Nazar Makar",
+            "email": "nazarii.makar@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3",
+        "zendframework/zendframework": ">=2.2.0"
+    },
+    "autoload": {
+        "psr-0": {
+            "ZfMigrations": "src/"
+        },
+        "classmap": [
+            "./Module.php"
+        ]
+    }
+}
