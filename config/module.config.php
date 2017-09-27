@@ -1,65 +1,65 @@
 <?php
 
-return array(
-    'migrations' => array(
+return [
+    'migrations' => [
         'dir' => dirname(__FILE__) . '/../../../../data/migrations',
         'namespace' => 'ZfMigrations\Migrations',
         'show_log' => true
-    ),
-    'console' => array(
-        'router' => array(
-            'routes' => array(
-                'migration-version' => array(
+    ],
+    'console' => [
+        'router' => [
+            'routes' => [
+                'migration-version' => [
                     'type' => 'simple',
-                    'options' => array(
+                    'options' => [
                         'route' => 'migration version [--env=]',
-                        'defaults' => array(
+                        'defaults' => [
                             'controller' => 'ZfMigrations\Controller\Migrate',
                             'action' => 'version'
-                        )
-                    )
-                ),
-                'migration-list' => array(
+                        ]
+                    ]
+                ],
+                'migration-list' => [
                     'type' => 'simple',
-                    'options' => array(
+                    'options' => [
                         'route' => 'migration list [--env=] [--all]',
-                        'defaults' => array(
+                        'defaults' => [
                             'controller' => 'ZfMigrations\Controller\Migrate',
                             'action' => 'list'
-                        )
-                    )
-                ),
-                'migration-apply' => array(
+                        ]
+                    ]
+                ],
+                'migration-apply' => [
                     'type' => 'simple',
-                    'options' => array(
+                    'options' => [
                         'route' => 'migration apply [<version>] [--env=] [--force] [--down] [--fake]',
-                        'defaults' => array(
+                        'defaults' => [
                             'controller' => 'ZfMigrations\Controller\Migrate',
                             'action' => 'apply'
-                        )
-                    )
-                ),
-                'migration-generate' => array(
+                        ]
+                    ]
+                ],
+                'migration-generate' => [
                     'type' => 'simple',
-                    'options' => array(
+                    'options' => [
                         'route' => 'migration generate [--env=]',
-                        'defaults' => array(
+                        'defaults' => [
                             'controller' => 'ZfMigrations\Controller\Migrate',
                             'action' => 'generateSkeleton'
-                        )
-                    )
-                )
-            )
-        )
-    ),
-    'controllers' => array(
-        'invokables' => array(
+                        ]
+                    ]
+                ]
+            ]
+        ]
+    ],
+    'controllers' => [
+        'invokables' => [
             'ZfMigrations\Controller\Migrate' => 'ZfMigrations\Controller\MigrateController'
-        ),
-    ),
-    'view_manager' => array(
-        'template_path_stack' => array(
+        ],
+    ],
+    'view_manager' => [
+        'template_path_stack' => [
             __DIR__ . '/../view',
-        ),
-    ),
-);
+        ],
+    ],
+];
